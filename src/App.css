@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  background-color: #000;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.neon-text {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de,
+    0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.toolbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.coral-btn {
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.coral-btn.selected {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px currentColor;
+}
+
+.reef-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #001a33;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.coral {
+  position: absolute;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.fish {
+  position: absolute;
+  font-size: 24px;
+  color: #ff9900;
+}
+
+.info-panel,
+.conservation-tip {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border: 2px solid #00ffff;
+  border-radius: 5px;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+@keyframes neon-pulse {
+  0%,
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de,
+      0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #ff00de,
+      0 0 17px #ff00de, 0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 37px #ff00de;
   }
+}
+
+.neon-text {
+  animation: neon-pulse 1.5s infinite alternate;
 }
