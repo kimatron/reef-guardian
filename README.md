@@ -1,3 +1,7 @@
+# reef-guardian
+
+An interactive coral reef builder where users learn about reef ecosystems while creating their own punk-style virtual reef.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
